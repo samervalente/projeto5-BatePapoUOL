@@ -1,0 +1,184 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#E5E5E5;
+}
+
+.topo{
+    width:100%;
+    height:80px;
+    color:#FFFFFF;
+    background-color:#FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    position:fixed;
+    top:0;
+    padding:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.container{
+    margin-top:20px;
+}
+
+.element-chat:last-child{
+    margin-bottom:200px;
+}
+
+.escrever{
+    width:100%;
+    height:80px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background-color:#FFFFFF;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 22px;
+}
+
+.escrever > input{
+    width:90%;
+    height:100%;
+    font-size:18pt;
+    font-family: 'Roboto';
+    border:none;
+  
+}
+
+.escrever ion-icon{
+    width:26px;
+    height:26px;
+}
+
+.element-chat{
+   font-size:14px;
+   font-family:'Roboto';
+   width:100%;
+   display:flex;
+    align-items:center;
+    margin: 5px 0px;
+    padding:10px;
+    height:40px;
+}
+
+
+.element-chat p{
+    margin: 0px 10px;
+}
+
+.element-chat.message{
+    background-color:#FFFFFF;;
+}
+
+.element-chat.status{
+    background-color:#DCDCDC;
+}
+
+.element-chat.private{
+    background-color:#FFDEDE;
+}
+
+.side-bar{
+    height:100%;
+    background-color:#FFFFFF;
+    width:30px;
+    position:absolute;
+    right:0;
+    z-index:1;
+    padding:15px;
+    font-family:'Roboto','sans-serif';
+    transition: all 3s;
+    
+}
+
+
+.overflow{
+    overflow-y:hidden;
+}
+
+.crescer{
+    width:259px;
+}
+
+.contatos{
+    overflow:scroll;
+    max-height:200px;
+    padding-top:15px;
+}
+
+.opacity{
+    opacity:0.5
+}
+
+.black{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.6);
+
+}
+
+.side-bar p{
+    text-align:center;
+    font-weight: bold;
+    line-height: 19px;
+    margin: 15px 10px;
+}
+
+.side-bar div{
+    margin: 15px 0px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.side-bar ion-icon{
+color:rgb(10, 10, 10);
+font-size:25px;
+margin-right:10px;
+
+}
+
+.side-bar li{
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.hidden{
+    display:none;
+}
+
+.right{
+    position:absolute;
+    right:5px;
+    width:24px;
+    height:24px;
+ 
+}
+
+.contatos li{
+    margin-bottom: 7px;
+}
+
+.visibilidade ul{
+    height:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.side-bar .right{
+    color:rgb(17, 184, 17);
+    
+}
+
+.priority{
+    z-index:-1;
+}
