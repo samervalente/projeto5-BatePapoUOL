@@ -18,7 +18,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .container{
@@ -94,18 +94,9 @@ body{
     z-index:1;
     padding:15px;
     font-family:'Roboto','sans-serif';
-    transition: all 3s;
     
 }
 
-
-.overflow{
-    overflow-y:hidden;
-}
-
-.crescer{
-    width:259px;
-}
 
 .contatos{
     overflow:scroll;
@@ -113,17 +104,6 @@ body{
     padding-top:15px;
 }
 
-.opacity{
-    opacity:0.5
-}
-
-.black{
-    width:100%;
-    height:100%;
-    position:absolute;
-    background: rgba(0, 0, 0, 0.6);
-
-}
 
 .side-bar p{
     text-align:center;
@@ -178,9 +158,5 @@ margin-right:10px;
 .side-bar .right{
     color:rgb(17, 184, 17);
     
-}
-
-.priority{
-    z-index:-1;
 }
 

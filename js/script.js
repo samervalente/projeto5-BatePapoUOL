@@ -1,7 +1,6 @@
 
 //Comunicação com o servdidor
 let userName= prompt("Qual é o seu lindo nome?")
-
 const nomeUsuario = {
     name: userName
 }
@@ -68,6 +67,7 @@ function enviarmensagem(){
 }
 
 
+//Bônus
 function abrirsidebar(){
     document.querySelector(".side-bar").classList.remove("hidden")
     document.querySelector(".black").classList.remove("hidden")
@@ -76,6 +76,7 @@ function abrirsidebar(){
 function fecharsidebar(){
     document.querySelector(".side-bar").classList.add("hidden")
     document.querySelector(".black").classList.add("hidden")
+    document.querySelector(".button")
 }
 
 function escolherVisibilidade(elemento){
@@ -95,24 +96,26 @@ function escolherVisibilidade(elemento){
         <ion-icon name="lock-closed-outline"></ion-icon>Público</li>`
 
     }
-
     return elemento
 }
-
-
 
 setInterval(function (){
     let promise = axios.get('https://mock-api.driven.com.br/api/v6/uol/participants')
     promise.then(putUsers)
+    promise.catch(TrataErro)
 }, 3000)
-
-
 
 function putUsers(resposta){
     let usersDiv = document.querySelector(".side-bar").querySelector("ul")
-
-    usersDiv.innerHTML += ` <li onclick="escolherUsuario(this)"><ion-icon name="person-circle-outline"></ion-icon>${resposta.data.name}<ion-icon name="checkmark-outline" class="right"></ion-icon></li>`
-     
+    for(let i = 0 ; i < resposta.data.length; i++){
+        usersDiv.innerHTML += ` <li onclick="escolherUsuario(this)"><ion-icon name="person-circle-outline"></ion-icon>${resposta.data[i].name}<ion-icon name="checkmark-outline" class="right"></ion-icon></li>`
+    }
+   
     
+}
+
+function TrataErro(erro){
+    let code = erro.response.status;
+    console.log(code)
 }
 
